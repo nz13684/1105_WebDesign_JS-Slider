@@ -8,7 +8,7 @@
 //大盒子
 #chen-item {
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; //溢出 隱藏
 
     //輪播項目
     .chen-item {
@@ -25,7 +25,7 @@
         width: 100%;
         object-fit: cover;
         animation-name: chenImage; //動畫名稱
-        animation-duration: 1s;
+        animation-duration: 1s;  //動畫時間
     }
 
     //標題
