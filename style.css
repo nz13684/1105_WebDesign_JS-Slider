@@ -52,6 +52,25 @@
   display: block;
 }
 
+#chen-prev, #chen-next {
+  width: 80px;
+  height: 150px;
+  background: #ffffff66;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#chen-prev {
+  left: 0;
+}
+
+#chen-next {
+  right: 0;
+}
+
 @-webkit-keyframes chenImage {
   0% {
     -webkit-transform: scale(1.5);
