@@ -9,12 +9,14 @@
 
 #chen-item {
   height: 100vh;
+  overflow: hidden;
 }
 
 #chen-item .chen-item {
   position: relative;
   height: 100%;
   width: 100%;
+  display: none;
 }
 
 #chen-item img {
@@ -44,6 +46,10 @@
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+.chen-active {
+  display: block;
 }
 
 @-webkit-keyframes chenImage {
