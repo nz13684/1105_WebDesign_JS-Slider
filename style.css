@@ -6,4 +6,87 @@
           box-sizing: border-box;
   font-family: 微軟正黑體;
 }
+
+#chen-item {
+  height: 100vh;
+}
+
+#chen-item .chen-item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#chen-item img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-name: chenImage;
+          animation-name: chenImage;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#chen-item h1 {
+  position: absolute;
+  color: white;
+  top: 100px;
+  left: 150px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  -webkit-animation-name: chenTitle;
+          animation-name: chenTitle;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes chenImage {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes chenImage {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes chenTitle {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes chenTitle {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 /*# sourceMappingURL=style.css.map */
