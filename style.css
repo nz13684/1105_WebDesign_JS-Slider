@@ -7,19 +7,19 @@
   font-family: 微軟正黑體;
 }
 
-#chen-item {
+#chen-slider {
   height: 100vh;
   overflow: hidden;
 }
 
-#chen-item .chen-item {
+#chen-slider .chen-item {
   position: relative;
   height: 100%;
   width: 100%;
   display: none;
 }
 
-#chen-item img {
+#chen-slider .chen-item img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -31,7 +31,7 @@
           animation-duration: 1s;
 }
 
-#chen-item h1 {
+#chen-slider .chen-item h1 {
   position: absolute;
   color: white;
   top: 100px;
@@ -48,11 +48,11 @@
           animation-fill-mode: backwards;
 }
 
-.chen-active {
+#chen-slider .chen-active {
   display: block;
 }
 
-#chen-prev, #chen-next {
+#chen-slider #chen-prev, #chen-slider #chen-next {
   width: 80px;
   height: 150px;
   background: #ffffff66;
@@ -61,14 +61,60 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
 }
 
-#chen-prev {
+#chen-slider #chen-prev {
   left: 0;
 }
 
-#chen-next {
+#chen-slider #chen-next {
   right: 0;
+}
+
+#chen-slider #chen-buttons {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#chen-slider #chen-buttons .chen-button {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #ffffff77;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#chen-slider #chen-buttons .chen-button-active {
+  -webkit-animation-name: chenButton;
+          animation-name: chenButton;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes chenButton {
+  0% {
+    background: #ffffff77;
+  }
+  100% {
+    background: #00000077;
+  }
+}
+
+@keyframes chenButton {
+  0% {
+    background: #ffffff77;
+  }
+  100% {
+    background: #00000077;
+  }
 }
 
 @-webkit-keyframes chenImage {

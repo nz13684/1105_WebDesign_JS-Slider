@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>輪播系統展示頁面</title>
     <link rel="stylesheet" href="./style.scss">
 </head>
+
 <body>
-    <!-- 輪播圖大盒子 -->
-    <div id="chen-slider">
+    <!-- 輪播圖大盒子 : data-slider-duration 自動輪播速度 -->
+    <div id="chen-slider" data-slider-duration="3000">
 
         <!-- 輪播圖項目 -->
         <div class="chen-item chen-active">
             <img src="./img/1.jpg" alt="">
-            <h1>紅玫瑰點鑽</h1>
+            <h1>紅玫瑰鑽戒</h1>
         </div>
 
         <div class="chen-item">
             <img src="./img/2.jpg" alt="">
-            <h1>白玫瑰顯藍</h1>
+            <h1>白玫瑰藍寶石</h1>
         </div>
 
         <div class="chen-item">
             <img src="./img/3.jpg" alt="">
-            <h1>冷色系</h1>
+            <h1>冷色系鑽戒/h1>
         </div>
 
         <!-- 大顆按扭區塊 -->
         <div id="chen-prev"></div>
         <div id="chen-next"></div>
+
+        <!-- 小顆按扭區塊 -->
+        <div id="chen-buttons">
+            <div class="chen-button chen-button-active" data-slider-item="1"></div>
+            <div class="chen-button" data-slider-item="2"></div>
+            <div class="chen-button" data-slider-item="3"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
