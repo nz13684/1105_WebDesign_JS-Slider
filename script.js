@@ -11,7 +11,7 @@ function btnNext() {
 
     if(index == items.length) index = 0; //編號如超出範圍 編號歸零
 
-    console.log(index);
+    showItem();
 }
 //按鈕函式 : 上一張
 function btnPrev() {    
@@ -19,8 +19,17 @@ function btnPrev() {
 
     if(index == -1) index = items.length - 1; //如果編號超出範圍 編號等於長度-1
 
-    console.log(index);
+    showItem();
 }
 
 next.onclick = btnNext;
-next.onclick = btnPrev;
+prev.onclick = btnPrev;
+
+
+function showItem() {
+    for(var i = 0; i < items.length; i++) {
+        items[1].classList.remove("chen-active");
+    }
+
+    itens[index].classList.add("chen-active");
+}
