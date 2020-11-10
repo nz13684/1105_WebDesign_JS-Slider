@@ -43,9 +43,9 @@
     }
 
     //要顯示的項目
-       .chen-active {
-           display: block;
-       }
+    .chen-active {
+         display: block;
+    }
 
     //大顆按鈕樣式
     #chen-prev, #chen-next {
@@ -71,6 +71,7 @@
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 0;
 
         .chen-button {
             display: inline-block;
@@ -85,7 +86,7 @@
         .chen-button-active {
             animation-name: chenButton;
             animation-duration: 0.5s;
-            animation-fill-mode: forwards;
+            animation-fill-mode: forwards; // 停留在動畫結束的畫面 (backwords 相反)
         }
     }   
 }

@@ -7,7 +7,7 @@ var index = 0;
 
 //按鈕函式 ： 下一張
 function btnNext() {
-    index++; //編號遞增
+    index++;                               //編號遞增
 
     if (index == items.length) index = 0; //編號如超出範圍 編號歸零
 
@@ -55,7 +55,7 @@ function reset() {
 }
 
 // 取得所有小按鈕
-var btns = document.getElementsByClassName("kid-button");
+var btns = document.getElementsByClassName("chen-button");
 
 // 迴圈執行每顆按鈕點擊事情
 for (var i = 0; i < btns.length; i++) {
@@ -67,11 +67,13 @@ for (var i = 0; i < btns.length; i++) {
         reset();
         switchButton();
     }
+}
 
-    // 小按鈕啟動效果切換
-    function switchButton() {
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].classList.remove("chen-button-active");
-        }
+// 小按鈕啟動效果切換
+function switchButton() {
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("chen-button-active");
+    }
 
-        btns[index].classList.add("chen-button-active");
+    btns[index].classList.add("chen-button-active");
+}
